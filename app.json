@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "tesla-clone",
+    "slug": "tesla-clone",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/splash.jpeg",
+    "splash": {
+      "image": "./assets/splash.jpeg",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/splash.jpeg",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/splash.jpeg"
+    }
+  }
+}
