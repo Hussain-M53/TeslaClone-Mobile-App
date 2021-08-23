@@ -4,9 +4,9 @@
     "slug": "tesla-clone",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/splash.jpeg",
+    "icon": "./assets/square.png",
     "splash": {
-      "image": "./assets/splash.jpeg",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#000000"
     },
@@ -21,12 +21,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/splash.jpeg",
+        "foregroundImage": "./assets/square.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/splash.jpeg"
+      "favicon": "./assets/square.png"
     }
   }
 }

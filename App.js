@@ -17,7 +17,7 @@ export default function App() {
           <Text style={styles.name}>Model S</Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={styles.name} >Model 3</Text>
+          <Text style={styles.name}>Model 3</Text>
         </TouchableOpacity>
         <TouchableOpacity>
           <Text style={styles.name}>Model X</Text>
@@ -82,6 +82,6 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     borderBottomWidth: 2,
     borderBottomColor: 'rgba(255,255,255,0.2)',
-    lineHeight: 33
+    lineHeight: 3,
   },
 });
