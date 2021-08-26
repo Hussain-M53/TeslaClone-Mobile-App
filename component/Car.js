@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageBackground, StyleSheet, Text, View,Dimensions } from 'react-native'
+import { ImageBackground, StyleSheet, Text, View, Dimensions, StatusBar } from 'react-native'
 import ButtonSection from './ButtonSection'
 
 const Car = ({ name, image, taglineCTA, tagline }) => {
@@ -20,9 +20,9 @@ const Car = ({ name, image, taglineCTA, tagline }) => {
             </View>
             <View style={styles.buttonSection}>
                 {/* primary is button with black bgcolor and white color */}
-                <ButtonSection data={"Custom Order"} type={"primary"}/>
+                <ButtonSection data={"Custom Order"} type={"primary"} />
                 {/* secondary is button with white bgcolor and black color */}
-                <ButtonSection data={"Existing Inventory"} type={"secondary"}/>
+                <ButtonSection data={"Existing Inventory"} type={"secondary"} />
             </View>
         </View>
     )
@@ -33,7 +33,7 @@ export default Car
 const styles = StyleSheet.create({
     carContainer: {
         width: '100%',
-        height: Dimensions.get('window').height,
+        height: Dimensions.get('window').height + StatusBar.currentHeight,
         alignItems: 'center'
     },
     image: {
@@ -42,31 +42,31 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
     },
     title: {
-        width:'100%',
+        width: '100%',
         position: 'absolute',
         top: 150,
-        alignItems:'center'
+        alignItems: 'center'
 
     },
     name: {
         fontSize: 35,
         fontWeight: 'bold',
-        marginBottom:5,
+        marginBottom: 5,
     },
     tagline: {
         fontSize: 15,
         fontWeight: 'normal',
-        textAlign:'center'
+        textAlign: 'center'
     },
     taglineCTA: {
         textDecorationLine: 'underline',
 
     },
-    buttonSection:{
-        position:'absolute',
-        bottom:25,
-        width:'90%',
-        alignItems:'center'
-        
+    buttonSection: {
+        position: 'absolute',
+        bottom: 25,
+        width: '90%',
+        alignItems: 'center'
+
     }
 })

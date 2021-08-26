@@ -3,14 +3,15 @@ import React, { useRef, } from 'react';
 import { StyleSheet, View, DrawerLayoutAndroid, Image, Text, TouchableOpacity, } from 'react-native';
 import CarList from './component/CarList';
 import Header from './component/Header';
-
+import Icon from 'react-native-vector-icons/FontAwesome'
+import drawerList from "./drawerList"
 export default function App() {
   const drawer = useRef(null);
 
   const sideBarView = () => (
     <View style={styles.drawerContainer}>
       <TouchableOpacity onPress={() => drawer.current.closeDrawer()} style={styles.logoContainer}>
-        <Image source={require('./assets/cancel.png')}  />
+        <Icon name="times" size={45} color="rgba(0,0,0,0.8)" />
       </TouchableOpacity>
       <View style={styles.menuItem}>
         <TouchableOpacity>
@@ -31,7 +32,11 @@ export default function App() {
         <TouchableOpacity>
           <Text style={styles.name}>Solar Panel</Text>
         </TouchableOpacity>
+        <View >
+          <Text style={styles.footer}>Copyright issued by Hash.Co</Text>
+        </View>
       </View>
+
     </View>
   );
 
@@ -40,7 +45,6 @@ export default function App() {
       ref={drawer}
       drawerWidth={250}
       drawerPosition={"right"}
-      drawerBackgroundColor="rgba(255,255,255,0.6)"
       renderNavigationView={sideBarView}
     >
       <View style={styles.container}>
@@ -65,7 +69,7 @@ const styles = StyleSheet.create({
   logoContainer: {
     height: '30%',
     width: '100%',
-    paddingRight: 15,
+    paddingRight: 25,
     paddingTop: 50,
     resizeMode: 'contain',
     alignItems: 'flex-end',
@@ -73,7 +77,8 @@ const styles = StyleSheet.create({
   menuItem: {
     alignItems: 'center',
     height: '70%',
-    paddingTop: 30,
+    paddingTop: 0,
+
   },
   name: {
     fontSize: 20,
@@ -81,7 +86,13 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
     marginBottom: 15,
     borderBottomWidth: 2,
-    borderBottomColor: 'rgba(255,255,255,0.2)',
-    lineHeight: 3,
+    borderBottomColor: 'rgba(0,0,0,0.4)',
+    lineHeight: 40,
   },
+  footer: {
+    flex: 1,
+    paddingTop: 100,
+    fontSize: 10,
+    color: "rgba(0,0,0,0.5)",
+  }
 });
